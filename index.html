@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Khabr - Live News</title>
+
+  <!-- Link to our external CSS file -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Google Fonts: Playfair Display for headings, Source Sans 3 for body -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <!-- ===== HEADER / NAVBAR ===== -->
+  <header class="header">
+    <div class="header-inner">
+      <!-- Logo / Site Title -->
+      <div class="logo">
+        <span class="logo-dot"></span>
+        <span class="logo-text">Khabr</span>
+        <span class="live-badge">LIVE</span>
+      </div>
+
+      <!-- Search bar -->
+      <div class="search-bar">
+        <input type="text" id="searchInput" placeholder="Search news..." />
+        <button id="searchBtn">Search</button>
+      </div>
+      <!-- Dark / Light mode toggle button -->
+      <button id="themeToggle" class="theme-toggle" title="Toggle theme">
+        <span id="themeIcon">☀️</span>
+      </button>
+    </div>
+
+    <!-- Category Filter Buttons -->
+    <nav class="category-nav">
+      <button class="cat-btn active" data-category="general">General</button>
+      <button class="cat-btn" data-category="technology">Technology</button>
+      <button class="cat-btn" data-category="business">Business</button>
+      <button class="cat-btn" data-category="sports">Sports</button>
+      <button class="cat-btn" data-category="health">Health</button>
+      <button class="cat-btn" data-category="science">Science</button>
+      <button class="cat-btn" data-category="entertainment">Entertainment</button>
+    </nav>
+  </header>
+
+  <!-- ===== MAIN CONTENT AREA ===== -->
+  <main class="main-content">
+
+    <!-- Status bar: shows loading / error messages -->
+    <div id="statusMsg" class="status-msg"></div>
+
+    <!-- Grid where news cards will be injected by JavaScript -->
+    <div id="newsGrid" class="news-grid"></div>
+
+    <!-- Load More button -->
+    <div class="load-more-wrap">
+      <button id="loadMoreBtn" class="load-more-btn" style="display:none;">Load More</button>
+    </div>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <p>Powered by <a href="https://newsapi.org" target="_blank">NewsAPI</a> &mdash; Khabr &copy; 2026</p>
+  </footer>
+
+  <!-- Link to our external JavaScript file -->
+  <script src="script.js"></script>
+</body>
+</html>
